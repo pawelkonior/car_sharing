@@ -365,6 +365,45 @@ html, body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.intro__content {
+  max-width: 66.25rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+.intro__hdl {
+  font-size: 5.625rem;
+  text-transform: uppercase;
+  color: white;
+  font-family: sans-serif;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.2509803922);
+}
+.intro__text {
+  font-size: 1rem;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+  line-height: 1.6;
+}
+.intro__btn {
+  background-color: #FF0000;
+  color: white;
+  border: 0;
+  border-radius: 2.0625rem;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding: 1.375rem 3.4375rem;
+  cursor: pointer;
+  margin: 0.625rem;
+}
+.intro__btn--secondary {
+  background-color: white;
+  color: #FF0000;
+}
 
 .logo {
   text-decoration: none;
