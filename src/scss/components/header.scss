@@ -1,0 +1,19 @@
+@import "../utils/functions";
+
+
+.header {
+  background: #00000066 0 0 no-repeat padding-box;
+  border-bottom: rem(2px) solid #FFFFFF33;
+  opacity: 1;
+  width: 100%;
+
+}
+
+.header .header__box {
+  max-width: rem(1060px);
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

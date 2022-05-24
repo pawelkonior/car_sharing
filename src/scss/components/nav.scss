@@ -1,0 +1,16 @@
+@import "../utils/functions";
+
+.menu {
+  &__item{
+    font-family: sans-serif;
+    font-size: rem(16px);
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    padding: rem(33px) rem(40px);
+    display: inline-block;
+  }
+  &__item--active, &__item:hover{
+    background: #FFFFFF33 0 0 no-repeat padding-box;
+  }
+}
