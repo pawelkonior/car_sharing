@@ -4,10 +4,11 @@
 .intro {
   background-image: url("#{$images-path}/intro-bg.png");
   width: 100%;
-  min-height: 100vh;
+  min-height: 95vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
   &__content{
     max-width: rem(1060px);
     width: 100%;
@@ -47,5 +48,19 @@
   &__btn--secondary{
     background-color: white;
     color: $primary-color;
+  }
+  &__more {
+    width: rem(55px);
+    height: rem(55px);
+    background: url("#{$images-path}/icon-arrow-down.svg") no-repeat center, $primary-color;
+    border-radius: 50%;
+    text-decoration: none;
+    color: transparent;
+    overflow: hidden;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateY(50%) translateX(-50%);
   }
 }

@@ -360,10 +360,11 @@ html, body {
 .intro {
   background-image: url("../images/intro-bg.png");
   width: 100%;
-  min-height: 100vh;
+  min-height: 95vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
 }
 .intro__content {
   max-width: 66.25rem;
@@ -403,6 +404,20 @@ html, body {
 .intro__btn--secondary {
   background-color: white;
   color: #FF0000;
+}
+.intro__more {
+  width: 3.4375rem;
+  height: 3.4375rem;
+  background: url("../images/icon-arrow-down.svg") no-repeat center, #FF0000;
+  border-radius: 50%;
+  text-decoration: none;
+  color: transparent;
+  overflow: hidden;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateY(50%) translateX(-50%);
 }
 
 .logo {
