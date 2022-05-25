@@ -1,7 +1,11 @@
 @import "../utils/functions";
 
-.container{
+.container {
   width: 100%;
   max-width: rem(1060px);
   margin: 0 auto rem(100px);
+}
+
+.container__dark {
+  background: #28272C;
 }

@@ -347,6 +347,10 @@ html, body {
   margin: 0 auto 6.25rem;
 }
 
+.container__dark {
+  background: #28272C;
+}
+
 .header {
   background: rgba(0, 0, 0, 0.4) 0 0 no-repeat padding-box;
   border-bottom: 0.125rem solid rgba(255, 255, 255, 0.2);
@@ -474,7 +478,7 @@ html, body {
   background: rgba(255, 255, 255, 0.2) 0 0 no-repeat padding-box;
 }
 
-.blog__hdl span::after, .blog__hdl span::before {
+.service__hdl span::after, .blog__hdl span::after, .service__hdl span::before, .blog__hdl span::before {
   content: "";
   display: inline-block;
   width: 3.125rem;
@@ -484,20 +488,20 @@ html, body {
   top: 50%;
 }
 
-.blog__hdl {
+.service__hdl, .blog__hdl {
   color: black;
   font-family: sans-serif;
   text-transform: uppercase;
   font-size: 2.1875rem;
   text-align: center;
 }
-.blog__hdl span {
+.service__hdl span, .blog__hdl span {
   position: relative;
 }
-.blog__hdl span::before {
+.service__hdl span::before, .blog__hdl span::before {
   transform: translateY(-50%) translateX(calc(-100% - 0.625rem));
 }
-.blog__hdl span::after {
+.service__hdl span::after, .blog__hdl span::after {
   transform: translateY(-50%) translateX(0.625rem);
 }
 
@@ -532,6 +536,77 @@ html, body {
   margin: 0;
 }
 .blog__more {
+  background-color: #FF0000;
+  color: white;
+  border: 0;
+  border-radius: 1.125rem;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  padding: 0.6875rem 1.8125rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.service__hdl span::before, .service__hdl span::after, .blog__hdl span::before, .blog__hdl span::after {
+  content: "";
+  display: inline-block;
+  width: 3.125rem;
+  height: 0.1875rem;
+  background: #FF0000;
+  position: absolute;
+  top: 50%;
+}
+
+.service__hdl, .blog__hdl {
+  color: black;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 2.1875rem;
+  text-align: center;
+}
+.service__hdl span, .blog__hdl span {
+  position: relative;
+}
+.service__hdl span::before, .blog__hdl span::before {
+  transform: translateY(-50%) translateX(calc(-100% - 0.625rem));
+}
+.service__hdl span::after, .blog__hdl span::after {
+  transform: translateY(-50%) translateX(0.625rem);
+}
+
+.service__box {
+  display: flex;
+  justify-content: space-between;
+}
+.service__article {
+  padding-right: 1rem;
+}
+.service__article:last-child {
+  padding-right: 0;
+}
+.service__img {
+  width: 100%;
+  padding-bottom: 1.5625rem;
+}
+.service__hdlSecondary {
+  color: #6A6A6A;
+  font-family: sans-serif;
+  font-size: 1.1875rem;
+  font-weight: normal;
+  padding-bottom: 0.9375rem;
+  margin: 0;
+}
+.service__text {
+  color: #6A6A6A;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: normal;
+  padding-bottom: 0.9375rem;
+  margin: 0;
+}
+.service__more {
   background-color: #FF0000;
   color: white;
   border: 0;
