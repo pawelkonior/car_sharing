@@ -4,3 +4,15 @@
 @function rem($value, $base: $base-font-size){
   @return math.div($value, $base) * 1rem;
 }
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return math.div($number, ($number * 0 + 1));
+  }
+
+  @return $number;
+}
+
+@function px($value, $base: $base-font-size){
+  @return strip-unit($value) * $base;
+}

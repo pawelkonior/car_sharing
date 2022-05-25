@@ -1,8 +1,12 @@
 @import "normalize";
 
 @import "common";
+@import "layout/layout";
+
 @import "components/header";
 @import "components/intro";
 
 @import "components/logo";
 @import "components/nav";
+
+@import "components/blog";

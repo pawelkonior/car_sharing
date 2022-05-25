@@ -1,0 +1,33 @@
+@import "../utils/functions";
+@import "../config";
+
+%lines {
+  content: "";
+  display: inline-block;
+  width: rem(50px);
+  height: rem(3px);
+  background: $primary-color;
+  position: absolute;
+  top: 50%;
+}
+
+%hdl {
+  color: black;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: rem(35px);
+  text-align: center;
+  span {
+    position: relative;
+    &::before{
+      @extend %lines;
+      transform: translateY(-50%) translateX(calc(-100% - rem(10px)));
+
+    }
+    &::after{
+      @extend %lines;
+      transform: translateY(-50%) translateX(calc(rem(10px)));
+
+    }
+  }
+}

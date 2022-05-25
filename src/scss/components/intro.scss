@@ -1,5 +1,6 @@
 @import "../config";
 @import "../utils/functions";
+@import "../utils/mixins";
 
 .intro {
   background-image: url("#{$images-path}/intro-bg.png");
@@ -9,6 +10,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  margin-bottom: rem(65px);
   &__content{
     max-width: rem(1060px);
     width: 100%;
@@ -34,20 +36,11 @@
   }
   &__btns{}
   &__btn{
-    background-color: $primary-color;
-    color: white;
-    border: 0;
-    border-radius: rem(33px);
-    font-family: sans-serif;
-    text-transform: uppercase;
-    font-size: rem(16px);
-    padding: rem(22px) rem(55px);
-    cursor: pointer;
+    @include btn(rem(22px), rem(55px), rem(16px));
     margin: rem(10px);
   }
   &__btn--secondary{
-    background-color: white;
-    color: $primary-color;
+    @include btn(rem(22px), rem(55px), rem(16px), white, $primary-color);
   }
   &__more {
     width: rem(55px);
