@@ -11,12 +11,13 @@
   top: 50%;
 }
 
-%hdl {
-  color: black;
+@mixin hdl($color: black) {
+  color: $color;
   font-family: sans-serif;
   text-transform: uppercase;
   font-size: rem(35px);
   text-align: center;
+  margin-top: 0;
   span {
     position: relative;
     &::before{

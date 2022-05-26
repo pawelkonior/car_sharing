@@ -9,7 +9,7 @@
   font-weight: normal;
 }
 
-@mixin btn ($padding-h, $padding-v, $font-size, $bg: $primary-color, $color: white) {
+@mixin btn ($padding-h, $padding-v, $font-size, $bg: $primary-color, $color: $secondary-text-color) {
   $height: px(2 * $padding-h + $font-size);
 
   background-color: $bg;

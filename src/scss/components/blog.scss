@@ -5,7 +5,7 @@
 
 .blog {
   &__hdl{
-    @extend %hdl;
+    @include hdl;
   }
   &__box{
     display: flex;
