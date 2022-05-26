@@ -9,17 +9,17 @@
   font-weight: normal;
 }
 
-@mixin btn ($padding-h, $padding-v, $font-size, $bg: $primary-color, $color: $secondary-text-color) {
+@mixin btn ($padding-h, $padding-v, $font-size, $bg: $primary-color, $color: $secondary-text-color, $border-color: $bg) {
   $height: px(2 * $padding-h + $font-size);
 
   background-color: $bg;
   color: $color;
-  border: 0;
+  border: rem(1px) solid $border-color;
   border-radius: rem(math.div($height, 2));
   font-family: sans-serif;
   text-transform: uppercase;
   font-size: $font-size;
-  padding: $padding-h $padding-v;
+  padding: $padding-h - rem(1px) $padding-v - rem(1px);
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
