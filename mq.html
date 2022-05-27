@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #test {
+            width: 100px;
+            height: 100px;
+            background: #FF0000;
+            transition: all 400ms;
+        }
+
+        @media only screen and (min-width: 500px){
+            #test {
+                background: blue;
+            }
+        }
+
+        @media only screen and (min-width: 600px){
+            #test {
+                border-radius: 50%;
+            }
+        }
+
+        @media only screen and (orientation: portrait){
+            #test {
+                border: 5px solid gold;
+            }
+        }
+
+        @media only screen and (min-aspect-ratio: 4/3){
+            #test {
+                border: 5px solid peru;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="test"></div>
+
+</body>
+</html>

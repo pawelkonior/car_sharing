@@ -1,0 +1,16 @@
+@import "../config";
+
+@mixin fonts ($family, $filename, $path: $fonts-path) {
+  @font-face {
+    font-family: $family;
+    src: url('#{$path}/#{$filename}.woff2') format('woff2'),
+    url('#{$path}/#{$filename}.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+
+@each $family, $filename in $fonts {
+  @include fonts($family, $filename);
+}

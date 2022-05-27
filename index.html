@@ -18,12 +18,20 @@
                 <span class="logo__text logo__text--highlights">Car</span>
                 <span class="logo__text">Sharing</span>
             </a>
-            <nav class="header__menu menu">
-                <a href="" class="menu__item menu__item--active">Home</a>
-                <a href="" class="menu__item">Blog</a>
-                <a href="" class="menu__item">Service</a>
-                <a href="" class="menu__item">Contact</a>
-            </nav>
+            <div class="menu">
+                <label for="hamburger" class="menu__icon">
+                    <span class="menu__line"></span>
+                    <span class="menu__line"></span>
+                    <span class="menu__line"></span>
+                </label>
+                <input type="checkbox" id="hamburger">
+                <nav class="header__menu menu__box">
+                    <a href="" class="menu__item menu__item--active">Home</a>
+                    <a href="" class="menu__item">Blog</a>
+                    <a href="" class="menu__item">Service</a>
+                    <a href="" class="menu__item">Contact</a>
+                </nav>
+            </div>
         </div>
     </header>
     <section class="intro__content">
@@ -113,7 +121,8 @@
             <img src="./src/images/form-contact.png" alt="" class="contact__intro">
             <form action="" method="post" class="contact__form">
                 <label class="contact__label" for="name">Name</label>
-                <input name="name" type="text" class="contact__input contact__input--error" id="name" placeholder="Type your name">
+                <input name="name" type="text" class="contact__input contact__input--error" id="name"
+                       placeholder="Type your name">
                 <label class="contact__label" for="email">Email</label>
                 <input name="email" type="email" class="contact__input" id="email" placeholder="Type your e-mail">
                 <label class="contact__label" for="message">Message</label>

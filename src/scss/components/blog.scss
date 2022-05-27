@@ -2,6 +2,7 @@
 @import "../config";
 @import "../utils/functions";
 @import "../utils/mixins";
+@import "../utils/media-queries";
 
 .blog {
   &__hdl{
@@ -10,9 +11,17 @@
   &__box{
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+    @include mq(sm) {
+      flex-direction: row;
+    }
   }
   &__article{
     padding-right: rem(16px);
+    @media only screen and (max-width: rem(576px)){
+      margin-bottom: rem(16px);
+      padding-right: 0;
+    }
     &:last-child {
       padding-right: 0;
     }
@@ -25,13 +34,26 @@
     @include text(rem(19px));
     padding-bottom: rem(15px);
     margin: 0;
+    @media only screen and (max-width: rem(576px)){
+      padding-right: rem(10px);
+      padding-left: rem(10px);
+    }
   }
   &__text{
     @include text(rem(14px));
     padding-bottom: rem(15px);
     margin: 0;
+    @media only screen and (max-width: rem(576px)){
+      padding-right: rem(10px);
+      padding-left: rem(10px);
+    }
   }
   &__more{
     @include btn(rem(11px), rem(29px), rem(14px));
+    @media only screen and (max-width: rem(576px)){
+      margin-right: rem(10px);
+      margin-left: rem(10px);
+      display: inline-block;
+    }
   }
 }

@@ -341,6 +341,30 @@ html, body {
   font-size: 16px;
 }
 
+@font-face {
+  font-family: "Nunito Sans Black";
+  src: url("../fonts/nunitosans-black-webfont.woff2") format("woff2"), url("../fonts/nunitosans-black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nunito Sans Bold";
+  src: url("../fonts/nunitosans-bold-webfont.woff2") format("woff2"), url("../fonts/nunitosans-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nunito Sans Extrabold";
+  src: url("../fonts/nunitosans-extrabold-webfont.woff2") format("woff2"), url("../fonts/nunitosans-extrabold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nunito Sans Light";
+  src: url("../fonts/nunitosans-light-webfont.woff2") format("woff2"), url("../fonts/nunitosans-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 .container {
   width: 100%;
   max-width: 66.25rem;
@@ -357,14 +381,19 @@ html, body {
   opacity: 1;
   width: 100%;
 }
-
 .header .header__box {
   max-width: 66.25rem;
   width: 100%;
   margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: relative;
+}
+@media only screen and (min-width: 992px) {
+  .header .header__box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .intro {
@@ -390,7 +419,7 @@ html, body {
   font-size: 5.625rem;
   text-transform: uppercase;
   color: white;
-  font-family: sans-serif;
+  font-family: "Nunito Sans Black", sans-serif;
   text-shadow: 0 3px 6px rgba(0, 0, 0, 0.2509803922);
 }
 .intro__text {
@@ -465,8 +494,62 @@ html, body {
   color: #FF0000;
 }
 
+.menu {
+  position: relative;
+}
+.menu__box {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7) 0 0 no-repeat padding-box;
+  right: -100%;
+  transition: all 400ms;
+}
+.menu__box:hover {
+  right: 0;
+}
+@media only screen and (min-width: 992px) {
+  .menu__box {
+    flex-direction: row;
+    position: static;
+    background: transparent;
+  }
+}
+.menu__icon {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0.625rem;
+  position: absolute;
+  right: 10px;
+  transform: translateY(-100%);
+  top: 10px;
+}
+.menu__icon:hover + .menu__box {
+  right: 0;
+}
+@media only screen and (min-width: 992px) {
+  .menu__icon {
+    display: none;
+  }
+}
+.menu__icon + input {
+  display: none;
+}
+.menu__icon + input:checked + .menu__box {
+  right: 0;
+}
+.menu__line {
+  width: 2.875rem;
+  height: 0.3125rem;
+  background: white;
+  display: inline-block;
+  margin-bottom: 0.625rem;
+}
 .menu__item {
-  font-family: sans-serif;
+  font-family: "Nunito Sans Bold", sans-serif;
   font-size: 1rem;
   text-decoration: none;
   text-transform: uppercase;
@@ -508,9 +591,21 @@ html, body {
 .blog__box {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+}
+@media only screen and (min-width: 576px) {
+  .blog__box {
+    flex-direction: row;
+  }
 }
 .blog__article {
   padding-right: 1rem;
+}
+@media only screen and (max-width: 36rem) {
+  .blog__article {
+    margin-bottom: 1rem;
+    padding-right: 0;
+  }
 }
 .blog__article:last-child {
   padding-right: 0;
@@ -527,6 +622,12 @@ html, body {
   padding-bottom: 0.9375rem;
   margin: 0;
 }
+@media only screen and (max-width: 36rem) {
+  .blog__hdlSecondary {
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+  }
+}
 .blog__text {
   color: #6A6A6A;
   font-family: sans-serif;
@@ -534,6 +635,12 @@ html, body {
   font-weight: normal;
   padding-bottom: 0.9375rem;
   margin: 0;
+}
+@media only screen and (max-width: 36rem) {
+  .blog__text {
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+  }
 }
 .blog__more {
   background-color: #FF0000;
@@ -547,6 +654,13 @@ html, body {
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
+}
+@media only screen and (max-width: 36rem) {
+  .blog__more {
+    margin-right: 0.625rem;
+    margin-left: 0.625rem;
+    display: inline-block;
+  }
 }
 
 .contact__hdl span::after, .contact__hdl span::before, .service__hdl span::after, .service__hdl span::before, .blog__hdl span::before, .blog__hdl span::after {

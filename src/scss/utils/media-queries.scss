@@ -1,0 +1,19 @@
+@use "sass:map";
+@import "../config";
+
+@mixin mq($breakpoint) {
+  @if not map.has-key($grid-breakpoints, $breakpoint) {
+    @error "No such breakpoint, hommie: #{$breakpoint}.";
+  }
+
+  $breakpoint-type: "min";
+
+  @if $breakpoint == 'xs' {
+    $breakpoint-type: "max";
+    $breakpoint: "sm";
+  }
+
+  @media only screen and (#{$breakpoint-type}-width: map.get($grid-breakpoints, $breakpoint)) {
+    @content;
+  }
+}

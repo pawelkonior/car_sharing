@@ -1,8 +1,57 @@
 @import "../utils/functions";
+@import "../utils/media-queries";
 
 .menu {
+  position: relative;
+  &__box{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7) 0 0 no-repeat padding-box;
+    right: -100%;
+    transition: all 400ms;
+    &:hover {
+      right: 0;
+    }
+    @include mq(lg){
+      flex-direction: row;
+      position: static;
+      background: transparent;
+    }
+  }
+  &__icon{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding: rem(10px);
+    position: absolute;
+    right: 10px;
+    transform: translateY(-100%);
+    top: 10px;
+    &:hover + .menu__box {
+      right: 0;
+    }
+    @include mq(lg) {
+      display: none;
+    }
+    & + input {
+      display: none;
+      &:checked + .menu__box {
+        right: 0;
+      }
+    }
+  }
+  &__line{
+    width: rem(46px);
+    height: rem(5px);
+    background: white;
+    display: inline-block;
+    margin-bottom: rem(10px);
+  }
   &__item{
-    font-family: sans-serif;
+    font-family: "Nunito Sans Bold", sans-serif;
     font-size: rem(16px);
     text-decoration: none;
     text-transform: uppercase;
